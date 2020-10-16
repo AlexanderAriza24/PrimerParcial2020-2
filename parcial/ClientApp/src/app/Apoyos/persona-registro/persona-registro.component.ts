@@ -17,7 +17,20 @@ export class PersonaRegistroComponent implements OnInit {
   }
 
   add(){
-    alert('se agrego una persona' + JSON.stringify(this.persona));
-    this.personaService.post(this.persona);
+   
+    if(this.personaService.validarCampos(this.persona)){
+
+      alert('porfavor llene todos los campos');
+    }else if(this.personaService.verificarIdentificacion(this.persona)){
+
+      alert('la persona con la identificacion ' + this.persona.identificacion + ' ya esta registrada');
+    }else if(this.personaService.validarApoyoAsignado(this.persona)){
+      
+      alert('el monto digitado excede el valor de ayuda disponible');
+    }else {
+
+      alert('se agrego una nueva persona' + JSON.stringify(this.persona));
+      this.personaService.post(this.persona);
+    }
   }
 }

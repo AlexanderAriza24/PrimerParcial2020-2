@@ -19,6 +19,7 @@ export class PersonaConsultaComponent implements OnInit {
 
   get(){
     this.personas = this.personaService.get();
+    //document.getElementsByName("totalApoyo")[0].value = this.personaService.totalApoyoAsignado();
   }
 
 }

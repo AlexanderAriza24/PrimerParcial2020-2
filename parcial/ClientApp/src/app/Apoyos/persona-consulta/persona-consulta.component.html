@@ -14,11 +14,7 @@
             <th scope="col">Apellidos</th>
             <th scope="col">sexo</th>
             <th scope="col">Edad</th>
-            <th scope="col">Departamento</th>
-            <th scope="col">Ciudad</th>
-            <th scope="col">ValorApoyo</th>
-            <th scope="col">Modalidad</th>
-            <th scope="col">Fecha</th>
+            <th scope="col">Valor Apoyo</th>
           </tr>
         </thead>
         <tbody>
@@ -29,12 +25,12 @@
             <td>{{ persona.apellidos }}</td>
             <td>{{persona.sexo  }}</td>
             <td>{{ persona.edad  }}</td>
-            <td>{{ persona.departamento  }}</td>
-            <td>{{ persona.ciudad }}</td>
             <td>{{ persona.valorApoyo }}</td>
-            <td>{{ persona.modalidad }}</td>
-            <td>{{ persona.fecha }}</td>
           </tr>
         </tbody>
       </table>
-    
+
+    <div class="form-group">
+          <label>Total Apoyo Brindado</label>
+          <input type="text"  name="totalApoyo"/>
+        </div>
