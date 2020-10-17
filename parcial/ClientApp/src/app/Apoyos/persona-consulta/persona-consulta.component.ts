@@ -14,12 +14,14 @@ export class PersonaConsultaComponent implements OnInit {
 
   ngOnInit() {
 
-    this.get();
+    this.personaService.get().subscribe(result => {
+      this.personas = result;
+    });
   }
 
-  get(){
+  /*get(){
     this.personas = this.personaService.get();
-    //document.getElementsByName("totalApoyo")[0].value = this.personaService.totalApoyoAsignado();
-  }
+    document.getElementsByName("totalApoyo")[0].value = this.personaService.totalApoyoAsignado();
+  }*/
 
 }
